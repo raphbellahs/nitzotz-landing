@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Button } from './button';
 import { SendIcon,Loader2 } from 'lucide-react';
-import { Alert, AlertDescription} from '@components/ui/alert'
 
 
 export const HeroImage = () => {
