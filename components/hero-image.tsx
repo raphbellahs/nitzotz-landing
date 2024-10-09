@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { Button } from './button';
-import { SendIcon } from 'lucide-react';
+import { SendIcon,Loader2 } from 'lucide-react';
+import { Alert, AlertDescription} from '@components/ui/alert'
+
 
 export const HeroImage = () => {
   const [contactType, setContactType] = useState('email');
@@ -104,7 +106,7 @@ export const HeroImage = () => {
             <SendIcon size={20} className="group-hover:animate-shake" />
           </Button>
         </form>
-        {status && <p className="mt-4 text-center text-white">{status}</p>}
+        {status && <p className="mt-4 text-center text-white ">{status}</p>}
       </div>
     </div>
   );
