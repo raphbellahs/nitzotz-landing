@@ -37,34 +37,36 @@ export const HeroImage = () => {
   };
 
   return (
-    <div className="w-full max-w-md md:max-w-2xl lg:max-w-6xl mx-auto mt-16 animate-fade-in opacity-0 [--animation-delay:200ms]">
-      <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-lg border border-white border-opacity-20 p-8 md:p-12 shadow-lg min-h-[300px] md:min-h-[400px]">
-        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-6 text-center text-gradient my-6">
+    <div className="w-full max-w-md md:max-w-2xl lg:max-w-6xl mx-auto animate-fade-in opacity-0 [--animation-delay:200ms]">
+      <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-lg border border-white border-opacity-20 p-6 md:p-8 shadow-lg min-h-[300px] md:min-h-[400px]">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 text-center text-gradient">
           Inscrivez-vous dès maintenant !
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-          <input
-            name="nom"
-            type="text"
-            placeholder="Nom"
-            className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            required
-          />
-          <input
-            name="prenom"
-            type="text"
-            placeholder="Prénom"
-            className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            required
-          />
-          <input
-            name="ecole"
-            type="text"
-            placeholder="École"
-            className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            required
-          />
-          <div className="flex justify-center space-x-4 mb-4 font-bold text-lg md:text-sm lg:text-md">
+          <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:space-x-2">
+            <input
+              name="nom"
+              type="text"
+              placeholder="Nom"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              required
+            />
+            <input
+              name="prenom"
+              type="text"
+              placeholder="Prénom"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              required
+            />
+            <input
+              name="ecole"
+              type="text"
+              placeholder="École"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              required
+            />
+          </div>
+          <div className="flex justify-center space-x-4 mb-4 font-bold md:text-sm lg:text-md">
             <button
               type="button"
               className={`px-10 py-4 rounded-md ${
@@ -105,7 +107,7 @@ export const HeroImage = () => {
             <SendIcon size={20} className="group-hover:animate-shake" />
           </Button>
         </form>
-        {status && <p className="mt-4 text-center text-white ">{status}</p>}
+        {status && <p className="mt-4 text-center text-white">{status}</p>}
       </div>
     </div>
   );
