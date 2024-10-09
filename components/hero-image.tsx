@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState,FormEvent } from 'react';
 import { Button } from './button';
 import { SendIcon,Loader2 } from 'lucide-react';
 
@@ -9,9 +9,9 @@ export const HeroImage = () => {
   const [contactType, setContactType] = useState('email');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target;
+    const form = e.target as HTMLFormElement;
     const data = new FormData(form);
     const payload = Object.fromEntries(data.entries());
 
