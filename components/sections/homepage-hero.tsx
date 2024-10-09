@@ -1,10 +1,19 @@
 import { Button, Highlight } from "../button";
+import Image from 'next/image';
+
 import { Hero, HeroTitle, HeroSubtitle } from "../hero";
 import { HeroImage } from "../hero-image";
 import { ChevronIcon } from "../icons/chevron";
 
 export const HomepageHero = () => (
   <Hero>
+    <Image
+      src="/Nitzotz_logo.png"
+      alt="Nitzotz Logo"
+      width={400}
+      height={200}
+      className=" animate-fade-in opacity-0 w-64 mx-auto"
+    />
     <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0"
       href="/"
