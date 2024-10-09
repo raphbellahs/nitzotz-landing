@@ -12,7 +12,7 @@ export const HomepageHero = () => (
       alt="Nitzotz Logo"
       width={400}
       height={200}
-      className=" animate-fade-in opacity-0 w-64 mx-auto"
+      className="animate-fade-in opacity-0 w-64 mx-auto md:mt-0 mt-[-10rem]"
     />
     <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0"
