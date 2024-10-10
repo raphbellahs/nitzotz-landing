@@ -1,4 +1,5 @@
 // import { AnalyticsWrapper } from "../components/analytics";
+import { Analytics } from "@vercel/analytics/react"
 import { Container } from "../components/container";
 // import { CopyrightLinearBanner } from "../components/copyright-linear-banner";
 import { Footer } from "../components/footer";

@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --navigation-height: 4.8rem;
+    --hover-border-color: #60A5FA; /* You can change this to any color you want */
   }
 
   html {
@@ -50,5 +51,15 @@
 
   .mask-shortcutkeys {
     mask-image: linear-gradient(to right, transparent, black 40%, black calc(60%), transparent 100%);
+  }
+}
+
+@layer components {
+  .input-hover-effect {
+    @apply border border-white border-opacity-20 transition-colors duration-300;
+  }
+
+  .input-hover-effect:hover {
+    border-color: var(--hover-border-color, #60A5FA); /* fallback to a medium blue */
   }
 }

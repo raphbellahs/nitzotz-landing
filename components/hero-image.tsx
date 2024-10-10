@@ -1,9 +1,8 @@
 "use client"
 
-import React, { useState,FormEvent } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Button } from './button';
-import { SendIcon,Loader2 } from 'lucide-react';
-
+import { SendIcon, Loader2 } from 'lucide-react';
 
 export const HeroImage = () => {
   const [contactType, setContactType] = useState('email');
@@ -48,31 +47,31 @@ export const HeroImage = () => {
               name="nom"
               type="text"
               placeholder="Nom"
-              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
               required
             />
             <input
               name="prenom"
               type="text"
               placeholder="Prénom"
-              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
               required
             />
             <input
               name="ecole"
               type="text"
               placeholder="École"
-              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              className="w-full md:w-1/3 px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
               required
             />
           </div>
           <div className="flex justify-center space-x-4 mb-4 font-bold md:text-sm lg:text-md">
             <button
               type="button"
-              className={`px-10 py-4 rounded-md ${
+              className={`px-10 py-4 rounded-md transition-colors duration-300 ${
                 contactType === 'email'
                   ? 'bg-white bg-opacity-20 text-white'
-                  : 'bg-transparent text-gray-300'
+                  : 'bg-transparent text-gray-300 hover:bg-white hover:bg-opacity-10'
               }`}
               onClick={() => setContactType('email')}
             >
@@ -80,10 +79,10 @@ export const HeroImage = () => {
             </button>
             <button
               type="button"
-              className={`px-4 py-2 rounded-md ${
+              className={`px-4 py-2 rounded-md transition-colors duration-300 ${
                 contactType === 'phone'
                   ? 'bg-white bg-opacity-20 text-white'
-                  : 'bg-transparent text-gray-300'
+                  : 'bg-transparent text-gray-300 hover:bg-white hover:bg-opacity-10'
               }`}
               onClick={() => setContactType('phone')}
             >
@@ -94,11 +93,11 @@ export const HeroImage = () => {
             name={contactType}
             type={contactType === 'email' ? 'email' : 'tel'}
             placeholder={contactType === 'email' ? "Entrez votre email" : "Entrez votre numéro de téléphone"}
-            className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md border border-white border-opacity-20 bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
             required
           />
           <Button
-            className="w-3/4 mx-auto flex items-center justify-center space-x-2"
+            className="w-3/4 mx-auto flex items-center justify-center space-x-2 hover:bg-opacity-90 transition-colors duration-300"
             type="submit"
             variant="primary"
             size="large"
