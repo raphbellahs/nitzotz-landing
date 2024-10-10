@@ -37,7 +37,7 @@ export const HeroImage = () => {
 
   return (
     <div className="w-full max-w-md md:max-w-2xl lg:max-w-6xl mx-auto animate-fade-in opacity-0 [--animation-delay:200ms]">
-      <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-lg border border-white border-opacity-20 p-6 md:p-8 shadow-lg min-h-[300px] md:min-h-[400px]">
+      <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-lg border border-white border-opacity-20 p-6 md:p-8 shadow-lg">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 text-center text-gradient">
           Inscrivez-vous dès maintenant !
         </h2>
@@ -97,7 +97,7 @@ export const HeroImage = () => {
             required
           />
           <Button
-            className="w-3/4 mx-auto flex items-center justify-center space-x-2 hover:bg-opacity-90 transition-colors duration-300"
+            className="w-3/4 mx-auto flex items-center justify-center space-x-2 hover:bg-opacity-30 transition-colors duration-300"
             type="submit"
             variant="primary"
             size="large"

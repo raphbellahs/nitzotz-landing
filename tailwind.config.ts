@@ -51,11 +51,11 @@ module.exports = {
     },
     backgroundImage: {
       "primary-gradient":
-        "linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)",
+        "linear-gradient(88deg, hsla(200, 88%, 38%, 1) 0%, hsla(149, 40%, 27%, 1) 100%)",
       "page-gradient":
-        "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3), transparent)",
+        "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(12,128,194,0.3), transparent)",
       "hero-gradient":
-        "radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,0.15),transparent)",
+        "radial-gradient(ellipse 50% 80% at 20% 40%,rgba(12,128,194,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(12,128,194,0.15),transparent)",
       "hero-glow":
         "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
       "glow-lines":
@@ -66,7 +66,7 @@ module.exports = {
         "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
     },
     boxShadow: {
-      primary: "rgb(80 63 205 / 50%) 0px 1px 40px",
+      primary: "rgb(26 148 122 / 50%) 0px 1px 40px",
     },
     transitionDelay: {
       0: "0ms",

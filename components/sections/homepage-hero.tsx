@@ -10,10 +10,10 @@ export const HomepageHero = () => (
     <Image
       src="/Nitzotz_logo.png"
       alt="Nitzotz Logo"
-      width={400}
+      width={200}
       height={200}
-      className="animate-fade-in opacity-0 w-64 mx-auto md:mt-0 mt-[-10rem]"
-    />
+      className="animate-fade-in opacity-0 w-40 md:w-64 mx-auto md:mt-0 mb-10 md:mb-8"
+     />
     <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0"
       href="/"
