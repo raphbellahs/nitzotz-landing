@@ -25,11 +25,11 @@ export const HomepageHero = () => (
     </Button>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
       Votre formation
-      <br className="hidden md:block" /> technologique des le lycée
+      <br className="hidden md:block" /> technologique dès le lycée
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Rejoignez le premier programme déstinés aux lycéens francophones
-      <br className="hidden md:block" /> d'acceder à des opportunités dans les renseignements
+      Rejoignez le premier programme destiné aux lycéens francophones
+      <br className="hidden md:block" /> d'accéder à des opportunités dans le renseignement
     </HeroSubtitle>
     {/* <Button
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"

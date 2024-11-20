@@ -37,6 +37,12 @@
     color: transparent;
   }
 
+  .text-gradient-green {
+    background: linear-gradient(to right bottom, #047fb8 30%, #6db98f);  /* Changed colors */
+    background-clip: text;
+    color: transparent;
+  }
+
   .mask-radial-faded {
     mask-image: radial-gradient(circle at center center, black, transparent 80%)
   }
@@ -51,6 +57,17 @@
 
   .mask-shortcutkeys {
     mask-image: linear-gradient(to right, transparent, black 40%, black calc(60%), transparent 100%);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }
 
