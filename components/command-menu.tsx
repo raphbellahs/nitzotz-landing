@@ -83,16 +83,32 @@ export const CommandMenu = () => {
     <div className={classNames(opened && "opened")} ref={commandMenuRef}>
       <div
         className={classNames(
-          "absolute left-[calc(50%+7.5rem)] flex w-[90vw] max-w-[64rem] -translate-x-1/2 flex-col items-start rounded-xl border border-transparent-white bg-transparent-white shadow-[rgb(0_0_0_/_35%)_0px_7px_32px] transition-[transform,opacity] md:left-1/2",
-          opened && "translate-y-[12.8rem] opacity-100 md:translate-y-[2.4rem]",
-          !opened && "translate-y-[12.8rem] opacity-60"
+          "absolute left-0 md:left-[calc(50%+2rem)] flex w-full md:w-[90vw] max-w-[64rem] -translate-x-0 md:-translate-x-1/2 flex-col items-start rounded-lg md:rounded-xl border border-transparent-white bg-transparent-white shadow-[rgb(0_0_0_/_35%)_0px_7px_32px] transition-[transform,opacity]",
+          opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-100",
+          !opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-60"
         )}
       >
-        <span className="ml-4 mt-2 bg-white/[0.05] px-2 text-xs leading-10 text-white/80">
+        {/* Mobile Header */}
+        <div className="flex w-full items-center justify-between p-4 md:hidden">
+          <span className="text-sm font-medium text-white">FAQ</span>
+          {selectedQuestion !== null && (
+            <button
+              onClick={handleBackClick}
+              className="text-white/80 hover:text-white transition-colors"
+            >
+              ← Retour
+            </button>
+          )}
+        </div>
+
+        {/* Desktop Header */}
+        <span className="hidden md:inline-block ml-4 mt-2 bg-white/[0.05] px-2 text-xs leading-10 text-white/80">
           FAQ - Questions fréquentes
         </span>
+
+        {/* Search - Desktop only */}
         {selectedQuestion === null && (
-          <div className="flex w-full items-center p-4">
+          <div className="hidden md:flex w-full items-center p-4">
             <Search className="h-5 w-5 text-white/80 mr-3" />
             <input
               placeholder="Rechercher une question..."
@@ -102,19 +118,21 @@ export const CommandMenu = () => {
             />
           </div>
         )}
-        <div className="flex w-full flex-col text-sm">
+
+        <div className="flex w-full flex-col">
           {selectedQuestion !== null ? (
             <div className="p-4">
+              {/* Desktop Back Button */}
               <button
                 onClick={handleBackClick}
-                className="text-white/80 mb-4 hover:text-white transition-colors"
+                className="hidden md:block text-white/80 mb-4 hover:text-white transition-colors"
               >
                 ← Retour aux questions
               </button>
-              <h3 className="text-lg font-medium mb-3 text-white">
+              <h3 className="text-base md:text-lg font-medium mb-3 text-white">
                 {questionOptions[selectedQuestion].question}
               </h3>
-              <p className="text-white text-base leading-relaxed">
+              <p className="text-sm md:text-base text-white leading-relaxed">
                 {questionOptions[selectedQuestion].response}
               </p>
             </div>
@@ -123,10 +141,10 @@ export const CommandMenu = () => {
               <button
                 key={question}
                 onClick={(e) => handleQuestionClick(index, e)}
-                className="command-menu-button flex h-[4.6rem] w-full items-center gap-3 px-5 text-white hover:bg-white/[0.05] transition-colors"
+                className="command-menu-button flex h-14 md:h-[4.6rem] w-full items-center gap-3 px-4 md:px-5 text-white hover:bg-white/[0.05] transition-colors"
               >
                 <Icon className="h-5 w-5" />
-                <span className="text-base">{question}</span>
+                <span className="text-sm md:text-base text-left">{question}</span>
               </button>
             ))
           )}
