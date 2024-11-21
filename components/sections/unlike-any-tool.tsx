@@ -11,7 +11,7 @@ export const UnlikeAnyTool = () => (
   <div className="text-white">
     <Container>
       <div className="text-center">
-        <HeroTitle className="text-gradient-green text-2xl md:text-5xl">
+        <HeroTitle className="text-gradient-green text-2xl md:text-3xl lg:text-5xl">
           Innovez avec le Premier Programme
           <br className="hidden md:inline-block" /> Technologique Francophone
         </HeroTitle>

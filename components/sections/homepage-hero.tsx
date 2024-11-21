@@ -28,7 +28,7 @@ export const HomepageHero = () => (
       <br className="hidden md:block" /> technologique dès le lycée
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Rejoignez le premier programme destiné aux lycéens francophones
+      Rejoignez le premier programme permettant aux lycéens francophones
       <br className="hidden md:block" /> d'accéder à des opportunités dans le renseignement
     </HeroSubtitle>
     {/* <Button

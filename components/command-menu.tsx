@@ -7,7 +7,7 @@ const questionOptions = [
   {
     question: "Qu'est-ce que Nitzotz et quel est son objectif?",
     icon: Brain,
-    response: "Nitzotz est un programme de formation technologique pour les jeunes francophones, créé par des vétérans des unités d'élite israéliennes. Notre but est de faciliter l'intégration des francophones dans les unités technologiques comme la 8200."
+    response: "Nitzotz est un programme de formation technologique pour les jeunes francophones, créé par des anciens d'unités technologiques israéliennes. Notre but est de faciliter l'intégration des francophones dans les unités de Modiin."
   },
   {
     question: "Comment se déroule le programme Nitzotz?",
@@ -22,7 +22,7 @@ const questionOptions = [
   {
     question: "Quels sont les avantages uniques de Nitzotz?",
     icon: Network,
-    response: "Formation complète avec mentorat personnalisé, réseau professionnel et préparation intensive à l'intégration dans le secteur technologique israélien. Une vraie passerelle entre la France et Israël."
+    response: "Formation complète avec mentorat personnalisé, réseau professionnel et préparation intensive à l'intégration dans le secteur technologique israélien."
   },
 ] as const;
 

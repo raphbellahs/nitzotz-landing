@@ -68,14 +68,14 @@ export const HeroImage = () => {
             <input
               name="email"
               type="email"
-              placeholder="Entrez votre email"
+              placeholder="Email"
               className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
               required
             />
             <input
               name="phone"
               type="tel"
-              placeholder="Entrez votre numéro de téléphone"
+              placeholder="Téléphone"
               className="w-full px-4 py-2 md:py-3 text-lg md:text-sm lg:text-md rounded-md bg-white bg-opacity-5 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 input-hover-effect"
               required
             />
