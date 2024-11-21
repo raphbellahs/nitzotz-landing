@@ -67,7 +67,7 @@ export const KeyboardShortcuts = () => {
   return (
     <>
       <div className="text-center mb-12">
-        <HeroTitle className="text-gradient text-3xl md:text-5xl">
+        <HeroTitle className="text-gradient text-2xl md:text-5xl">
           {activeText}
         </HeroTitle>
       </div>

@@ -7,22 +7,22 @@ const questionOptions = [
   {
     question: "Qu'est-ce que Nitzotz et quel est son objectif?",
     icon: Brain,
-    response: "Nitzotz est un programme de formation technologique conçu pour les jeunes francophones, créé par d'anciens membres des unités de renseignement israéliennes. Son objectif est de réduire le fossé culturel, social et technologique qui freine l'intégration des francophones dans les unités technologiques d'élite en Israël comme les unités 8200, 9900 et 81."
+    response: "Nitzotz est un programme de formation technologique pour les jeunes francophones, créé par des vétérans des unités d'élite israéliennes. Notre but est de faciliter l'intégration des francophones dans les unités technologiques comme la 8200."
   },
   {
     question: "Comment se déroule le programme Nitzotz?",
     icon: Code,
-    response: "Le programme se déroule sur trois ans : La première année est consacrée à l'initiation à Python et aux fondamentaux techniques. La deuxième année approfondit avec C/C++ et le développement 'low-level'. La troisième année est dédiée à la réalisation de projets concrets. Le programme inclut aussi un double apprentissage linguistique (hébreu/français) et des exercices de présentation orale."
+    response: "Le programme dure 3 ans : 1ère année - Python et bases techniques, 2ème année - C/C++ et développement bas niveau, 3ème année - projets pratiques. Formation complémentaire en hébreu et français."
   },
   {
     question: "Comment rejoindre le programme Nitzotz?",
     icon: Database,
-    response: "Le processus d'inscription se fait en trois étapes : 1) Une inscription sur le site nitzotz.org, 2) Un entretien individuel pour évaluer la motivation et le potentiel de l'élève, 3) Une rencontre avec les parents pour s'assurer de leur soutien. Le programme recherche des jeunes déterminés, motivés et prêts à s'investir pleinement en équipe."
+    response: "Inscription en 3 étapes : 1) Inscription sur nitzotz.org 2) Entretien individuel 3) Rencontre avec les parents. Nous recherchons des jeunes motivés et prêts à s'investir."
   },
   {
     question: "Quels sont les avantages uniques de Nitzotz?",
     icon: Network,
-    response: "Nitzotz offre une préparation complète avec un accent sur la confiance en soi, des présentations en hébreu, un réseau de mentors et des connexions avec les groupes Nitzotz français et israéliens. C'est une véritable passerelle entre le lycée et le monde professionnel en Israël, donnant aux participants toutes les clés pour réussir dans le secteur technologique israélien."
+    response: "Formation complète avec mentorat personnalisé, réseau professionnel et préparation intensive à l'intégration dans le secteur technologique israélien. Une vraie passerelle entre la France et Israël."
   },
 ] as const;
 
