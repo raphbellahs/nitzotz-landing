@@ -7,17 +7,17 @@ import { Code, Terminal, Rocket } from "lucide-react";
 const shortcuts = [
   { 
     text: "Initiation aux bases de la programmation avec Python et acquisition des fondamentaux techniques.", 
-    keys: "1ere Année",
+    keys: "1ère année",
     icon: Code
   },
   { 
     text: "Approfondissement avec des langages comme C ou C++ et des notions de développement \"low-level\".", 
-    keys: "2eme Année",
+    keys: "2ème année",
     icon: Terminal
   },
   { 
     text: "Les étudiants réalisent des projets concrets qui mettent en application tout ce qu'ils ont appris.", 
-    keys: "3eme Année",
+    keys: "3ème année",
     icon: Rocket
   },
 ];
