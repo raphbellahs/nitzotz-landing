@@ -45,9 +45,9 @@ export const UnlikeAnyTool = () => (
             <NitzotzLogo />
           </div>
           <div className="mt-8">
-            <p className="mb-4 text-2xl md:text-3xl">Une vision pour integrer les Francophones</p>
+            <p className="mb-4 text-2xl md:text-3xl">Une vision pour intégrer les Francophones</p>
             <p className="text-sm md:text-md text-primary-text">
-              De la France a Israel, Nitzotz a pour but de faire briller les jeunes Francophones.
+              De la France à Israël, Nitzotz a pour but de faire briller les jeunes Francophones.
             </p>
           </div>
         </div>
