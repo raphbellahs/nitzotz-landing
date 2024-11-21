@@ -17,14 +17,12 @@ export default function Homepage() {
           <HomepageHero />
         </Container>
 
-        <div
-          className={classNames(
-            "mask-radial-faded pointer-events-none absolute z-[-1] w-full",
-            "top-[60%]",
-            "[--color:#4DA16E] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]",
-            "after:absolute after:top-1/2 after:-left-1/2 after:h-[192.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(182,182,193,0.4)] after:bg-background"
-          )}
-        >
+        <div className={classNames(
+          "mask-radial-faded pointer-events-none absolute z-[-1] w-full overflow-hidden",
+          "top-[60%]",
+          "[--color:#4DA16E] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]",
+          "after:absolute after:top-1/2 after:-left-1/2 after:h-[192.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(182,182,193,0.4)] after:bg-background after:overflow-hidden"
+        )}>
           <StarsIllustration />
         </div>
       </div>
