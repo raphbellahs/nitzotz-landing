@@ -2,23 +2,23 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "./button";
 import { HeroTitle, HeroSubtitle } from "./hero";
-import { Code, Terminal, Rocket } from "lucide-react";
+import { BookOpen, Brain, Lightbulb } from "lucide-react";
 
 const shortcuts = [
   { 
     text: "Initiation aux bases de la programmation avec Python et acquisition des fondamentaux techniques.", 
     keys: "1ère année",
-    icon: Code
+    icon: BookOpen
   },
   { 
     text: "Approfondissement avec des langages comme C ou C++ et des notions de développement \"low-level\".", 
     keys: "2ème année",
-    icon: Terminal
+    icon: Brain
   },
   { 
     text: "Les étudiants réalisent des projets concrets qui mettent en application tout ce qu'ils ont appris.", 
     keys: "3ème année",
-    icon: Rocket
+    icon: Lightbulb
   },
 ];
 
@@ -65,14 +65,16 @@ export const KeyboardShortcuts = () => {
   };
 
   return (
-    <>
-      <div className="text-center mb-12">
-        <HeroTitle className="text-gradient text-xl md:text-2xl lg:text-5xl">
-          {activeText}
-        </HeroTitle>
+    <div className="flex flex-col justify-between h-[280px] w-full">
+      <div className="flex-1 flex items-center justify-center px-2 ">
+        <div className="h-[180px] flex items-center">
+          <HeroTitle className="text-gradient text-xl md:text-xl lg:text-4xl">
+            {activeText}
+          </HeroTitle>
+        </div>
       </div>
 
-      <div className="my-7 h-[4rem] min-h-[4rem] w-full overflow-hidden">
+      <div className="h-[4rem] min-h-[4rem] w-full overflow-hidden">
         <div
           ref={wrapperRef}
           className="mask-shortcutkeys flex h-[6rem] max-w-full snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden pb-8 scrollbar-hide"
@@ -95,6 +97,6 @@ export const KeyboardShortcuts = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };

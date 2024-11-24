@@ -1,18 +1,18 @@
 "use client";
 import classNames from "classnames";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Brain, Code, Database, Network, Search } from "lucide-react";
-
+import { Brain, Code, Database, Network, Search, ShieldQuestion } from "lucide-react";
+import React from "react";
 const questionOptions = [
   {
-    question: "Qu'est-ce que Nitzotz et quel est son objectif?",
+    question: "Qu'est-ce que Nitzotz et quel est son objectif ?",
     icon: Brain,
-    response: "Nitzotz est un programme de formation technologique pour les jeunes francophones, créé par des anciens d'unités technologiques israéliennes. Notre but est de faciliter l'intégration des francophones dans les unités de Modiin."
+    response: "Nitzotz est un programme de formation technologique pour les jeunes francophones, créé par des anciens d'unités technologiques israéliennes. Notre but est de faciliter l'intégration des francophones dans les unités technologiques."
   },
   {
     question: "Comment se déroule le programme Nitzotz?",
     icon: Code,
-    response: "Le programme dure 3 ans : 1ère année - Python et bases techniques, 2ème année - C/C++ et développement bas niveau, 3ème année - projets pratiques. Formation complémentaire en hébreu et français."
+    response: "Le programme dure 3 ans :\n\n1ère année - Python et bases techniques\n2ème année - C/C++ et développement bas niveau\n3ème année - projets pratiques. Formation complémentaire en hébreu et français."
   },
   {
     question: "Comment rejoindre le programme Nitzotz?",
@@ -22,8 +22,13 @@ const questionOptions = [
   {
     question: "Quels sont les avantages uniques de Nitzotz?",
     icon: Network,
-    response: "Formation complète avec mentorat personnalisé, réseau professionnel et préparation intensive à l'intégration dans le secteur technologique israélien."
+    response: "Formation complète avec mentorat personnalisé, réseau professionnel et préparation intensive."
   },
+  {
+    question: "Je ne veux pas rentrer dans une unité technologique, est-ce que je peux faire Nitzotz ?",
+    icon: ShieldQuestion,
+    response: "Bien sûr, Nitzotz donnera les outils en main pour préparer une future carrière dans le monde de la tech et apprendre des compétences qui serviront à vie."
+  }
 ] as const;
 
 export const CommandMenu = () => {
@@ -79,6 +84,15 @@ export const CommandMenu = () => {
     setSelectedQuestion(null);
   };
 
+  const formatResponse = (response: string) => {
+    return response.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        {index < response.split('\n').length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+
   return (
     <div className={classNames(opened && "opened")} ref={commandMenuRef}>
       <div
@@ -88,7 +102,6 @@ export const CommandMenu = () => {
           !opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-60"
         )}
       >
-        {/* Mobile Header */}
         <div className="flex w-full items-center justify-between p-4 md:hidden">
           <span className="text-sm font-medium text-white">FAQ</span>
           {selectedQuestion !== null && (
@@ -101,12 +114,10 @@ export const CommandMenu = () => {
           )}
         </div>
 
-        {/* Desktop Header */}
         <span className="hidden md:inline-block ml-4 mt-2 bg-white/[0.05] px-2 text-xs leading-10 text-white/80">
           FAQ - Questions fréquentes
         </span>
 
-        {/* Search - Desktop only */}
         {selectedQuestion === null && (
           <div className="hidden md:flex w-full items-center p-4">
             <Search className="h-5 w-5 text-white/80 mr-3" />
@@ -122,7 +133,6 @@ export const CommandMenu = () => {
         <div className="flex w-full flex-col">
           {selectedQuestion !== null ? (
             <div className="p-4">
-              {/* Desktop Back Button */}
               <button
                 onClick={handleBackClick}
                 className="hidden md:block text-white/80 mb-4 hover:text-white transition-colors"
@@ -133,7 +143,7 @@ export const CommandMenu = () => {
                 {questionOptions[selectedQuestion].question}
               </h3>
               <p className="text-sm md:text-base text-white leading-relaxed">
-                {questionOptions[selectedQuestion].response}
+                {formatResponse(questionOptions[selectedQuestion].response)}
               </p>
             </div>
           ) : (
@@ -153,3 +163,5 @@ export const CommandMenu = () => {
     </div>
   );
 };
+
+export default CommandMenu;
