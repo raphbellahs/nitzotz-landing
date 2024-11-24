@@ -1,3 +1,18 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://nitzotz.org'),
+  title: 'Nitzotz - Programme de Formation Technologique',
+  description: 'Programme de formation technologique pour les jeunes francophones, créé par des anciens d\'unités technologiques israéliennes.',
+  openGraph: {
+    title: 'Nitzotz - Programme de Formation Technologique',
+    description: 'Programme de formation technologique pour les jeunes francophones',
+    url: '/',
+    siteName: 'Nitzotz',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+}
 // import { AnalyticsWrapper } from "../components/analytics";
 import { Analytics } from "@vercel/analytics/react"
 import { Container } from "../components/container";

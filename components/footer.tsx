@@ -15,7 +15,7 @@ export const Footer = () => (
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="flex items-center">
           <Logo className="mr-4 h-4 w-4" />
-          <span className="text-grey">Nitzotz Team - 2024</span>
+          <span className="text-grey">contact@nitzotz.com</span>
         </div>
         
         <div className="my-8 flex space-x-6 text-grey lg:my-0">
