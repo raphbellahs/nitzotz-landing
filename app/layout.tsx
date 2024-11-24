@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react"
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nitzotz.org'),
@@ -25,16 +28,49 @@ export const metadata: Metadata = {
     locale: 'fr_IL',
     alternateLocale: 'fr_FR',
     type: 'website',
+    images: [
+      {
+        url: '/img/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nitzotz Programme'
+      }
+    ],
   },
   other: {
     'geo.region': 'IL',
     'geo.placename': 'Israel',
     'geo.position': '32.109;34.855',
     'ICBM': '32.109, 34.855'
-  }
+  },
+  icons: {
+    icon: [
+      { 
+        url: '/favicon-light.ico',
+        media: '(prefers-color-scheme: light)',
+        rel: 'icon'
+      },
+      { 
+        url: '/favicon-dark.ico',
+        media: '(prefers-color-scheme: dark)',
+        rel: 'icon'
+      }
+    ],
+    shortcut: [
+      { 
+        url: '/favicon-light.ico',
+        media: '(prefers-color-scheme: light)',
+        rel: 'shortcut icon'
+      },
+      { 
+        url: '/favicon-dark.ico',
+        media: '(prefers-color-scheme: dark)',
+        rel: 'shortcut icon'
+      }
+    ]
+  },
 }
 // import { AnalyticsWrapper } from "../components/analytics";
-import { Analytics } from "@vercel/analytics/react"
 import { Container } from "../components/container";
 // import { CopyrightLinearBanner } from "../components/copyright-linear-banner";
 import { Footer } from "../components/footer";
@@ -43,7 +79,7 @@ import "./globals.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <meta
           name="viewport"
