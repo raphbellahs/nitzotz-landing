@@ -14,15 +14,12 @@ export const HomepageHero = () => (
       height={200}
       className="animate-fade-in opacity-0 w-40 md:w-64 mx-auto md:mt-0 mb-10 md:mb-8"
      />
-    <Button
-      className="translate-y-[-1rem] animate-fade-in opacity-0"
-      href="/"
-      variant="secondary"
-      size="small"
+    <div
+      className="translate-y-[-1rem] animate-fade-in opacity-0 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-full bg-transparent-white border border-transparent-white"
     >
-      <span>Coming Soon</span>{" "}
+      <span>Coming Soon</span>
       <Highlight>→</Highlight>
-    </Button>
+    </div>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
       Votre formation
       <br className="hidden md:block" /> High-Tech dès le lycée
