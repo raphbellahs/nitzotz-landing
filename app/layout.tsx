@@ -46,26 +46,40 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { 
-        url: '/favicon-light.ico',
+        url: '/img/favicon-light.ico',
         media: '(prefers-color-scheme: light)',
         rel: 'icon'
       },
       { 
-        url: '/favicon-dark.ico',
+        url: '/img/favicon-dark.ico',
         media: '(prefers-color-scheme: dark)',
         rel: 'icon'
       }
     ],
     shortcut: [
       { 
-        url: '/favicon-light.ico',
+        url: '/img/favicon-light.ico',
         media: '(prefers-color-scheme: light)',
         rel: 'shortcut icon'
       },
       { 
-        url: '/favicon-dark.ico',
+        url: '/img/favicon-dark.ico',
         media: '(prefers-color-scheme: dark)',
         rel: 'shortcut icon'
+      }
+    ],
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        url: '/img/icon-192.png',
+        sizes: '192x192'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        url: '/img/icon-512.png',
+        sizes: '512x512'
       }
     ]
   },
