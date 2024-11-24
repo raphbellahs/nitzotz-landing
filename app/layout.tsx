@@ -1,17 +1,37 @@
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nitzotz.org'),
-  title: 'Nitzotz - Programme de Formation Technologique',
-  description: 'Programme de formation technologique pour les jeunes francophones, créé par des anciens d\'unités technologiques israéliennes.',
+  title: 'Nitzotz - Programme de Formation Technologique en Israel',
+  description: 'Programme de formation technologique en Israel pour les jeunes francophones, créé par des anciens d\'unités technologiques de Tsahal. Préparez votre avenir dans la tech israélienne.',
+  keywords: [
+    'formation high tech lycee israel',
+    'programme tech israel jeune',
+    'études technologiques israel',
+    'formation programmation israel',
+    'tech aliyah',
+    'formation francophone israel',
+    'études informatique israel',
+    'high-tech israel français',
+    'formation lycee tsahal',
+    'unités technologiques israel'
+  ],
   openGraph: {
-    title: 'Nitzotz - Programme de Formation Technologique',
-    description: 'Programme de formation technologique pour les jeunes francophones',
+    title: 'Nitzotz - Formation Technologique en Israel',
+    description: 'Formation technologique en Israel pour les jeunes francophones. Préparation aux unités technologiques et à la high-tech israélienne.',
     url: '/',
     siteName: 'Nitzotz',
-    locale: 'fr_FR',
+    locale: 'fr_IL',
+    alternateLocale: 'fr_FR',
     type: 'website',
   },
+  other: {
+    'geo.region': 'IL',
+    'geo.placename': 'Israel',
+    'geo.position': '32.109;34.855',
+    'ICBM': '32.109, 34.855'
+  }
 }
 // import { AnalyticsWrapper } from "../components/analytics";
 import { Analytics } from "@vercel/analytics/react"
