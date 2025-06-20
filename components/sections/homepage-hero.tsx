@@ -36,7 +36,7 @@ export const HomepageHero = () => (
               <strong>Eva Sebban</strong> rejoint notre équipe en tant que
               <br />
               <span className="text-green-700 dark:text-green-300 font-semibold">
-                Directrice des Opérations (c'est genre une secretaire vous inquietes pas les sangs)
+                Directrice des Opérations (c'est genre une secretaire vous inquietez pas les sangs)
               </span>
             </div>
           </div>
