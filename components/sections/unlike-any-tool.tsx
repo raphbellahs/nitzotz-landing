@@ -11,7 +11,7 @@ export const UnlikeAnyTool = () => (
   <div className="text-white">
     <Container>
       <div className="text-center">
-        <HeroTitle className="text-gradient-green md:text-3xl lg:text-5xl">
+        <HeroTitle className="text-gradient-green pb-2">
           Innovez avec le 1er Programme Technologique Francophone
         </HeroTitle>
         <HeroSubtitle className="mx-auto mb-8 md:mb-12 max-w-[68rem] text-base md:text-xl px-4 sm:px-2">
@@ -21,15 +21,15 @@ export const UnlikeAnyTool = () => (
     </Container>
     <div className="min-h-screen md:h-auto overflow-hidden">
       <div className="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 px-4 md:px-8 pb-8 md:pb-12">
-        <div className="relative flex min-h-[40rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)]">
+        <div className="relative flex min-h-[28rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)]">
           <KeyboardShortcuts />
           <p className="mb-4 text-2xl md:text-3xl">Un programme de formation sur mesure</p>
           <p className="text-sm md:text-md text-primary-text">
             Commencez dès le lycée avec une formation complete sur les meilleurs pratiques technologiques.
           </p>
         </div>
-        
-        <div className="relative flex min-h-[40rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:basis-[calc(33.33%-12px)]">
+
+        <div className="relative flex min-h-[28rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:basis-[calc(33.33%-12px)]">
           <div className="mask-linear-faded absolute top-[-9.2rem]">
             <ZapIllustration />
           </div>
@@ -38,8 +38,8 @@ export const UnlikeAnyTool = () => (
             Un suivi personnalisé pour vous accompagner dans votre parcours.
           </p>
         </div>
-        
-        <div className="relative flex min-h-[40rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:basis-[calc(33.33%-12px)]">
+
+        <div className="relative flex min-h-[28rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-end overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:basis-[calc(33.33%-12px)]">
           <div className="pointer-events-none mb-9 top-[0rem] w-[100%] opacity-90">
             <NitzotzLogo />
           </div>
@@ -50,10 +50,10 @@ export const UnlikeAnyTool = () => (
             </p>
           </div>
         </div>
-        
-        <div className="relative flex min-h-[40rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-start overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)]">
+
+        <div className="relative flex min-h-[60rem] md:min-h-[48rem] w-full shrink-0 flex-col items-center justify-start overflow-hidden rounded-[2rem] md:rounded-[4.8rem] border border-transparent-white bg-glass-gradient p-6 md:p-14 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)]">
           <CommandMenu />
-          <div className="transition-opacity md:[.opened+&]:opacity-0">
+          <div className="transition-opacity [.opened+&]:opacity-0">
             <p className="mb-4 text-2xl md:text-3xl">F.A.Q</p>
             <p className="text-sm md:text-md text-primary-text">
               Des questions ? Des réponses !

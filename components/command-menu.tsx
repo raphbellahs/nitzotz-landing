@@ -41,9 +41,6 @@ export const CommandMenu = () => {
     const handleClick = (e: MouseEvent) => {
       if (!commandMenuRef.current) return;
       const isInsideMenu = commandMenuRef.current.contains(e.target as Node);
-      const isMenuButton = e.target instanceof Element && 
-        (e.target.classList.contains("command-menu-button") || 
-         e.target.closest(".command-menu-button"));
 
       if (!isInsideMenu && opened) {
         setOpened(false);
@@ -52,13 +49,7 @@ export const CommandMenu = () => {
         return;
       }
 
-      if (isInsideMenu && !isMenuButton) {
-        setOpened(true);
-        return;
-      }
-
-      if (isMenuButton) {
-        e.stopPropagation();
+      if (isInsideMenu && !opened) {
         setOpened(true);
       }
     };
@@ -97,17 +88,17 @@ export const CommandMenu = () => {
     <div className={classNames(opened && "opened")} ref={commandMenuRef}>
       <div
         className={classNames(
-          "absolute left-0 md:left-[calc(50%+2rem)] flex w-full md:w-[90vw] max-w-[64rem] -translate-x-0 md:-translate-x-1/2 flex-col items-start rounded-lg md:rounded-xl border border-transparent-white bg-transparent-white shadow-[rgb(0_0_0_/_35%)_0px_7px_32px] transition-[transform,opacity]",
-          opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-100",
+          "absolute left-0 md:left-[calc(50%+2rem)] flex w-full md:w-[90vw] max-w-[64rem] max-h-[70vh] md:max-h-none overflow-y-auto -translate-x-0 md:-translate-x-1/2 flex-col items-start rounded-lg md:rounded-xl border border-transparent-white bg-transparent-white shadow-[rgb(0_0_0_/_35%)_0px_7px_32px] transition-[transform,opacity]",
+          opened && "translate-y-[2rem] md:translate-y-[14.4rem] opacity-100",
           !opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-60"
         )}
       >
-        <div className="flex w-full items-center justify-between p-4 md:hidden">
-          <span className="text-sm font-medium text-white">FAQ</span>
+        <div className="flex w-full items-center justify-between p-5 md:p-4 md:hidden">
+          <span className="text-xl font-medium text-white">FAQ</span>
           {selectedQuestion !== null && (
             <button
               onClick={handleBackClick}
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-lg text-white/80 hover:text-white transition-colors"
             >
               ← Retour
             </button>
@@ -132,17 +123,17 @@ export const CommandMenu = () => {
 
         <div className="flex w-full flex-col">
           {selectedQuestion !== null ? (
-            <div className="p-4">
+            <div className="p-5 md:p-4">
               <button
                 onClick={handleBackClick}
                 className="hidden md:block text-white/80 mb-4 hover:text-white transition-colors"
               >
                 ← Retour aux questions
               </button>
-              <h3 className="text-base md:text-lg font-medium mb-3 text-white">
+              <h3 className="text-xl md:text-lg font-medium mb-4 text-white">
                 {questionOptions[selectedQuestion].question}
               </h3>
-              <p className="text-sm md:text-base text-white leading-relaxed">
+              <p className="text-lg md:text-base text-white leading-relaxed">
                 {formatResponse(questionOptions[selectedQuestion].response)}
               </p>
             </div>
@@ -151,10 +142,10 @@ export const CommandMenu = () => {
               <button
                 key={question}
                 onClick={(e) => handleQuestionClick(index, e)}
-                className="command-menu-button flex h-14 md:h-[4.6rem] w-full items-center gap-3 px-4 md:px-5 text-white hover:bg-white/[0.05] transition-colors"
+                className="command-menu-button flex h-16 md:h-[4.6rem] w-full items-center gap-3 px-5 md:px-5 text-white hover:bg-white/[0.05] transition-colors"
               >
-                <Icon className="h-5 w-5" />
-                <span className="text-sm md:text-base text-left">{question}</span>
+                <Icon className="h-6 w-6 md:h-5 md:w-5" />
+                <span className="text-lg md:text-base text-left">{question}</span>
               </button>
             ))
           )}

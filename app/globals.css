@@ -13,6 +13,11 @@
     font-size: 62.5%;
   }
 
+  ::selection {
+    background-color: #60A5FA; /* Matches hover border color */
+    color: white;
+  }
+
   .highlighted-keys .active rect:first-child {
     fill-opacity: 0.4;
   }
