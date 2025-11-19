@@ -93,12 +93,12 @@ export const CommandMenu = () => {
           !opened && "translate-y-[10rem] md:translate-y-[14.4rem] opacity-60"
         )}
       >
-        <div className="flex w-full items-center justify-between p-5 md:p-4 md:hidden">
-          <span className="text-xl font-medium text-white">FAQ</span>
+        <div className="flex w-full items-center justify-between p-4 md:p-4 md:hidden">
+          <span className="text-lg font-medium text-white">FAQ</span>
           {selectedQuestion !== null && (
             <button
               onClick={handleBackClick}
-              className="text-lg text-white/80 hover:text-white transition-colors"
+              className="text-sm text-white/80 hover:text-white transition-colors"
             >
               ← Retour
             </button>
@@ -123,17 +123,17 @@ export const CommandMenu = () => {
 
         <div className="flex w-full flex-col">
           {selectedQuestion !== null ? (
-            <div className="p-5 md:p-4">
+            <div className="p-4 md:p-4">
               <button
                 onClick={handleBackClick}
                 className="hidden md:block text-white/80 mb-4 hover:text-white transition-colors"
               >
                 ← Retour aux questions
               </button>
-              <h3 className="text-xl md:text-lg font-medium mb-4 text-white">
+              <h3 className="text-base md:text-lg font-medium mb-3 md:mb-4 text-white leading-tight">
                 {questionOptions[selectedQuestion].question}
               </h3>
-              <p className="text-lg md:text-base text-white leading-relaxed">
+              <p className="text-sm md:text-base text-white leading-relaxed">
                 {formatResponse(questionOptions[selectedQuestion].response)}
               </p>
             </div>
@@ -142,10 +142,10 @@ export const CommandMenu = () => {
               <button
                 key={question}
                 onClick={(e) => handleQuestionClick(index, e)}
-                className="command-menu-button flex h-16 md:h-[4.6rem] w-full items-center gap-3 px-5 md:px-5 text-white hover:bg-white/[0.05] transition-colors"
+                className="command-menu-button flex min-h-[4rem] md:h-[4.6rem] w-full items-center gap-3 px-4 md:px-5 py-3 md:py-0 text-white hover:bg-white/[0.05] transition-colors"
               >
-                <Icon className="h-6 w-6 md:h-5 md:w-5" />
-                <span className="text-lg md:text-base text-left">{question}</span>
+                <Icon className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm md:text-base text-left leading-tight">{question}</span>
               </button>
             ))
           )}
